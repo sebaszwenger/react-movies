@@ -1,24 +1,26 @@
-import { MoviesGrid } from "./components/MoviesGrid.jsx";
-import { MovieCard } from "./components/MovieCard.jsx";
+import MoviesGrid from "./components/MoviesGrid.jsx";
+import MovieCard from "./components/MovieCard.jsx";
 import PageNotFound from "./pages/PageNotFound.jsx";
 import styles from "./App.module.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import LandingPage from "./pages/LandingPage.jsx";
+import MovieDetails from "./pages/MovieDetails.jsx";
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 
 export function App() {
   return (
-    <div>
+    <BrowserRouter>
       <header>
-        <h1 className={styles.title}>Movies</h1>
+        <NavLink to="/">
+          <h1 className={styles.title}>Movies</h1>
+        </NavLink>
       </header>
       <main>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<MoviesGrid />} />
-            <Route path="/movie" element={<MovieCard />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/movies/:movieId" element={<MovieDetails />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
       </main>
-    </div>
+    </BrowserRouter>
   );
 }
