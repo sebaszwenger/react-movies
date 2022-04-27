@@ -1,11 +1,15 @@
-import "./App.css";
+import { MoviesGrid } from "./components/MoviesGrid.jsx";
+import styles from "./App.module.css";
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <h1>React Movies</h1>
+    <div>
+      <header>
+        <h1 className={styles.title}>Movies</h1>
+      </header>
+      <main>
+        <MoviesGrid />
+      </main>
     </div>
   );
 }
-
-export default App;
