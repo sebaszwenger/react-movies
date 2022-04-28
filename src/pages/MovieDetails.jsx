@@ -11,7 +11,7 @@ export default function MovieDetails() {
         alt={movie.title}
       />
       <div className={styles.movieDetails}>
-        <p>
+        <p className={styles.firstP}>
           <strong>Title: </strong>
           {movie.title}
         </p>

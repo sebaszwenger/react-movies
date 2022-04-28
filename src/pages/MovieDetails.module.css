@@ -1,13 +1,21 @@
 .MovieDetailsContainer {
   display: flex;
-  gap: 15px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .movieDetails {
   max-width: 400px;
+  height: auto;
+  height: 80%;
+  margin: 15px;
+  font-size: 1.3rem;
 }
 
 .movieImage {
   border-radius: 10px;
+}
+
+.firstP {
+  margin-top: 0;
 }
