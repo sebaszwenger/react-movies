@@ -10,9 +10,12 @@ export function App() {
   return (
     <BrowserRouter>
       <header>
-        <NavLink to="/">
+        {/* <NavLink to="/">
           <h1 className={styles.title}>Movies</h1>
-        </NavLink>
+        </NavLink> */}
+        <h1 className={styles.title}>
+          <NavLink to="/">Movies</NavLink>
+        </h1>
       </header>
       <main>
         <Routes>
