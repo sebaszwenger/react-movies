@@ -1,0 +1,13 @@
+.MovieDetailsContainer {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.movieDetails {
+  max-width: 400px;
+}
+
+.movieImage {
+  border-radius: 10px;
+}
